@@ -1,1 +1,63 @@
+.container {
+    height: auto;
+    width: auto;
+}
 
+.row {
+    display: block;
+    width: auto;
+}
+
+
+.green, .red, .blue {
+    display: flex;
+}
+
+.content {
+    margin: 10px;
+    height: 200px;
+}
+.green .content {
+    background-color: green;
+}
+
+
+.red .content {
+    background-color: red;
+}
+
+
+.blue .content {
+    background-color: skyblue;
+}
+
+
+/* for width 1024 */
+
+@media screen and (min-device-width:1024px) {
+
+    .green .content , .red .content , .blue .content {
+        flex: 1 1 auto;
+    }
+}
+
+/* -----for 768px ----*/
+
+@media screen and (min-device-width:768px) and (max-device-width:1023px) {
+    .green .content , .red .content {
+        flex: 1 1 auto;
+    }
+
+    .blue {
+        flex-direction: column;
+    }   
+}
+
+
+/* ---- for the 320px ----*/
+
+@media screen and (min-device-width:320px) and (max-device-width:767px) {
+    .green, .red, .blue {
+        flex-direction: column;
+    }   
+}
